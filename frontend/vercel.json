@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://memora-backend-2010.onrender.com"
+      "destination": "https://memora-backend-2010.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
