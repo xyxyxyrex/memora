@@ -51,7 +51,7 @@ function DashboardPage() {
           api.get("/topics/"),
           api.get("/auth/progress"),
         ]);
-        setTopics(topicsRes.data);
+        setTopics(Array.isArray(topicsRes.data) ? topicsRes.data : []);
         setProgress(progressRes.data);
       } catch (err) {
         console.error("Failed to load dashboard data:", err);
@@ -105,7 +105,7 @@ function DashboardPage() {
   };
 
   // Derived list: filter + sort
-  const filteredTopics = topics
+  const filteredTopics = (Array.isArray(topics) ? topics : [])
     .filter((t) => {
       const q = search.toLowerCase();
       return (
