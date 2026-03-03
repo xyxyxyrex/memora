@@ -271,7 +271,7 @@ async def generate_reviewer_endpoint(
     except Exception as e:
         error_msg = str(e)
         if "429" in error_msg or "quota" in error_msg.lower():
-            raise HTTPException(status_code=429, detail="Gemini API rate limit reached. Please wait and try again.")
+            raise HTTPException(status_code=429, detail="AI rate limit reached. Please wait and try again.")
         raise HTTPException(status_code=500, detail=f"Failed to generate reviewer: {error_msg}")
 
     return {

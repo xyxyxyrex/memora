@@ -42,7 +42,7 @@ async def generate_quiz_endpoint(
     except Exception as e:
         error_msg = str(e)
         if "429" in error_msg or "quota" in error_msg.lower():
-            raise HTTPException(status_code=429, detail="Gemini API rate limit reached. Please wait a minute and try again.")
+            raise HTTPException(status_code=429, detail="AI rate limit reached. Please wait a minute and try again.")
         raise HTTPException(status_code=500, detail=f"AI generation failed: {error_msg}")
 
     # Create quiz
