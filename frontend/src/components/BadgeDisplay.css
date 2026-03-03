@@ -1,0 +1,41 @@
+.badges-section {
+    margin-bottom: 24px;
+}
+
+.badges-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.badges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.badge-item:hover {
+    background: rgba(108, 99, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+}
+
+.badge-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+}

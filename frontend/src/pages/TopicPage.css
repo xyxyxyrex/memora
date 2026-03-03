@@ -1,0 +1,147 @@
+.topic-page {
+    padding: 32px 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.topic-container {
+    max-width: 640px;
+    width: 100%;
+}
+
+.topic-page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.topic-page-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    background: var(--surface);
+    padding: 4px;
+    border-radius: 12px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+}
+
+.mode-btn:hover:not(.active) {
+    color: var(--text-primary);
+}
+
+.topic-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.upload-area {
+    border: 2px dashed rgba(108, 99, 255, 0.3);
+    border-radius: 16px;
+    padding: 40px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.upload-area:hover {
+    border-color: var(--primary);
+    background: rgba(108, 99, 255, 0.05);
+}
+
+.upload-area.has-file {
+    border-color: var(--success);
+    background: rgba(44, 182, 125, 0.05);
+}
+
+.upload-icon {
+    font-size: 2rem;
+}
+
+.upload-text {
+    font-weight: 600;
+}
+
+.upload-hint,
+.upload-size {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.error-message {
+    padding: 12px 16px;
+    background: rgba(225, 97, 98, 0.1);
+    border: 1px solid rgba(225, 97, 98, 0.3);
+    border-radius: 12px;
+    color: var(--danger);
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}

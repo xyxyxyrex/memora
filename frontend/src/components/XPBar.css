@@ -1,0 +1,48 @@
+.xp-bar-section {
+    margin-bottom: 24px;
+}
+
+.xp-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.xp-bar-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.xp-bar-info {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.xp-progress-track {
+    width: 100%;
+    height: 12px;
+    background: var(--surface);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.xp-progress-fill {
+    height: 100%;
+    background: var(--gradient-1);
+    border-radius: 6px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.xp-progress-glow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(4px);
+    animation: pulse-glow 2s infinite;
+}
