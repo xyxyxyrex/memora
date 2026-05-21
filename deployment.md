@@ -142,21 +142,26 @@ Then trigger a manual redeploy.
 
 1. Go to Supabase dashboard → **Authentication → URL Configuration**
 2. Add to **Redirect URLs**:
+
    ```
    https://YOUR-APP.vercel.app/dashboard
+
    ```
 
 ---
 
 ## Step 7 — Run Database Migrations
 
-Once the backend is live, run the migration once via Render's shell:
+Shell access requires a paid Render plan. Instead, run migrations automatically during the build:
 
-1. Render dashboard → your service → **Shell**
-2. Run:
-   ```bash
-   python migrate.py
+1. Render dashboard → your service → **Settings**
+2. Update **Build Command** to:
    ```
+   pip install -r requirements.txt && python migrate.py
+   ```
+3. Click **Save Changes** and trigger a manual redeploy (or just push a commit)
+
+The updated `migrate.py` uses SQLAlchemy so it works with both SQLite and PostgreSQL. It safely skips columns that already exist, so it's safe to run on every deploy.
 
 ---
 
